@@ -1,0 +1,29 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/threatstack/ts
+name: ts
+description: >-
+  A first-party command-line tool for the Threat Stack (TS) V2 REST API,
+  written in Go and published in the threatstack GitHub organization. Authors
+  requests with HAWK authentication using the operator's Threat Stack User ID,
+  API key, and Organization ID.
+language: go
+repo: https://github.com/threatstack/ts
+install:
+  - method: source
+    command: go install github.com/threatstack/ts@latest
+  - method: git
+    command: git clone https://github.com/threatstack/ts
+auth:
+  scheme: hawk
+  env:
+    - TS_USER_ID
+    - TS_API_KEY
+    - TS_ORGANIZATION_ID
+related:
+  - https://github.com/threatstack/threatstack-api-scripts
+  - https://github.com/threatstack/rest-api-examples
+notes: >-
+  The underlying api.threatstack.com host has been decommissioned following the
+  F5 acquisition (product is now F5 Distributed Cloud AIP); the CLI source
+  remains published for reference.

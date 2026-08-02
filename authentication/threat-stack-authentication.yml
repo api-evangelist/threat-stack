@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: https://clouddocs.f5.com/training/community/threat-stack/html/class2/Threat_Stack_API.html
+docs: https://clouddocs.f5.com/training/community/threat-stack/html/class2/Threat_Stack_API.html
+summary:
+  types: [hawk]
+  api_key_in: [header]
+  oauth2_flows: []
+schemes:
+  - name: hawk
+    type: http
+    scheme: hawk
+    description: >-
+      The Threat Stack V2 REST API authenticates every request with HAWK, an
+      HMAC-based HTTP authentication scheme. The signature is computed from the
+      caller's API key, and the request carries a signed Authorization header so
+      the platform can verify the sender.
+    credentials:
+      - id: TS_USER_ID
+        maps_to: HAWK Auth ID
+        description: User ID of the API key holder.
+      - id: TS_API_KEY
+        maps_to: HAWK Auth Key
+        description: API key for the user specified by TS_USER_ID.
+      - id: TS_ORGANIZATION_ID
+        maps_to: HAWK Ext
+        description: Organization ID of the organization to access.
+    sources: [docs]
+notes: >-
+  Derived from published F5/Threat Stack documentation rather than an OpenAPI
+  spec (no machine-readable spec is published). Threat Stack is now F5
+  Distributed Cloud App Infrastructure Protection (AIP); the api.threatstack.com
+  host is decommissioned.

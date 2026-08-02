@@ -1,7 +1,30 @@
 aid: threat-stack
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/threat-stack.png
 name: Threat Stack
-description: Threat Stack is a company surfaced as a portfolio company of techstars and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Threat Stack was a Boston-based cloud security company providing full-stack
+  cloud security observability, intrusion detection, and compliance monitoring
+  for infrastructure and applications across cloud-native workloads including
+  virtual machines, containers, and Kubernetes. Its platform combined rules and
+  supervised machine learning to detect threats, vulnerabilities, and attacks in
+  real time. Threat Stack exposed a RESTful V2 API (HAWK/HMAC authenticated) and
+  trigger-based webhook alerts, along with first-party SDKs, a Go CLI, and
+  configuration-management modules (Chef, Ansible, Puppet, Terraform,
+  CloudFormation, Helm). The company was acquired by F5 in 2021 and the product
+  is now F5 Distributed Cloud App Infrastructure Protection (AIP); the original
+  threatstack.com and api.threatstack.com domains have been decommissioned.
 url: https://raw.githubusercontent.com/api-evangelist/threat-stack/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +32,23 @@ x-backed-by:
 - techstars
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-acquired-by: f5
+x-successor: F5 Distributed Cloud App Infrastructure Protection (AIP)
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Security
+- Cloud Security
+- Cloud Monitoring
+- Intrusion Detection
+- Compliance
+- Observability
+- DevSecOps
+- Containers
+- Kubernetes
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,4 +57,25 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://threatstack.com/
+  url: https://www.f5.com/glossary/threat-stack
+- type: ProductPage
+  url: https://www.f5.com/products/distributed-cloud-services
+- type: Documentation
+  url: https://clouddocs.f5.com/training/community/threat-stack/html/class2/Threat_Stack_API.html
+- type: APIReference
+  url: https://clouddocs.f5.com/training/community/threat-stack/html/class2/Threat_Stack_API.html
+- type: GitHubOrganization
+  url: https://github.com/threatstack
+- type: Authentication
+  url: authentication/threat-stack-authentication.yml
+- type: Packages
+  url: packages/threat-stack-packages.yml
+- type: SDKs
+  url: packages/threat-stack-packages.yml
+- type: CLI
+  url: cli/threat-stack-cli.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 3
+  pass: local-v1

@@ -1,0 +1,34 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/threatstack
+notes: >-
+  Threat Stack was acquired by F5 and the product is now F5 Distributed Cloud
+  App Infrastructure Protection (AIP). The primary domains (threatstack.com,
+  app.threatstack.com, api.threatstack.com) no longer resolve, but the
+  first-party GitHub organization (github.com/threatstack, "F5 - Threat Stack")
+  and published packages below remain available. official:true is set only for
+  libraries published under the threatstack GitHub org or the @threatstack npm
+  scope.
+packages:
+  - language: javascript
+    registry: npm
+    name: "@threatstack/threatstack-agent-node"
+    url: https://www.npmjs.com/package/@threatstack/threatstack-agent-node
+    install: npm install @threatstack/threatstack-agent-node
+    description: Threat Stack AppSec agent for Node.js applications.
+    license: PROPRIETARY
+    version: 1.5.4
+    official: true
+  - language: python
+    registry: github
+    name: threatstack-python-client
+    url: https://github.com/threatstack/threatstack-python-client
+    install: pip install git+https://github.com/threatstack/threatstack-python-client
+    description: First-party Python client library for the Threat Stack V2 REST API.
+    official: true
+  - language: ruby
+    registry: github
+    name: threatstack-ruby
+    url: https://github.com/threatstack/threatstack-ruby
+    description: First-party Ruby implementation of the Threat Stack API.
+    official: true
