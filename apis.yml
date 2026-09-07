@@ -90,3 +90,5 @@ x-enrichment:
   status: enriched
   artifacts_added: 3
   pass: local-v1
+x-parent: f5
+x-relationship: acquisition
